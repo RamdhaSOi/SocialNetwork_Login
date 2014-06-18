@@ -21,6 +21,8 @@
 		4FB3CB54193740910048373B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3CB36193740910048373B /* UIKit.framework */; };
 		4FB3CB5C193740910048373B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FB3CB5A193740910048373B /* InfoPlist.strings */; };
 		4FB3CB5E193740910048373B /* SocialNetwork_LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3CB5D193740910048373B /* SocialNetwork_LoginTests.m */; };
+		4FB3CB6C193741B30048373B /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3CB6B193741B30048373B /* SuccessViewController.m */; };
+		4FB3CB6F193742FC0048373B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB3CB6E193742FC0048373B /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		4FB3CB59193740910048373B /* SocialNetwork_LoginTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SocialNetwork_LoginTests-Info.plist"; sourceTree = "<group>"; };
 		4FB3CB5B193740910048373B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4FB3CB5D193740910048373B /* SocialNetwork_LoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialNetwork_LoginTests.m; sourceTree = "<group>"; };
+		4FB3CB6A193741B30048373B /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessViewController.h; sourceTree = "<group>"; };
+		4FB3CB6B193741B30048373B /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessViewController.m; sourceTree = "<group>"; };
+		4FB3CB6E193742FC0048373B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FB3CB35193740910048373B /* CoreGraphics.framework in Frameworks */,
+				4FB3CB6F193742FC0048373B /* FacebookSDK.framework in Frameworks */,
 				4FB3CB37193740910048373B /* UIKit.framework in Frameworks */,
 				4FB3CB33193740910048373B /* Foundation.framework in Frameworks */,
 			);
@@ -112,11 +118,14 @@
 		4FB3CB38193740910048373B /* SocialNetwork_Login */ = {
 			isa = PBXGroup;
 			children = (
+				4FB3CB6D193742D00048373B /* Facebook */,
 				4FB3CB41193740910048373B /* AppDelegate.h */,
 				4FB3CB42193740910048373B /* AppDelegate.m */,
 				4FB3CB44193740910048373B /* Main.storyboard */,
 				4FB3CB47193740910048373B /* ViewController.h */,
 				4FB3CB48193740910048373B /* ViewController.m */,
+				4FB3CB6A193741B30048373B /* SuccessViewController.h */,
+				4FB3CB6B193741B30048373B /* SuccessViewController.m */,
 				4FB3CB4A193740910048373B /* Images.xcassets */,
 				4FB3CB39193740910048373B /* Supporting Files */,
 			);
@@ -150,6 +159,14 @@
 				4FB3CB5A193740910048373B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4FB3CB6D193742D00048373B /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				4FB3CB6E193742FC0048373B /* FacebookSDK.framework */,
+			);
+			name = Facebook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +268,7 @@
 			files = (
 				4FB3CB49193740910048373B /* ViewController.m in Sources */,
 				4FB3CB43193740910048373B /* AppDelegate.m in Sources */,
+				4FB3CB6C193741B30048373B /* SuccessViewController.m in Sources */,
 				4FB3CB3F193740910048373B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +394,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SocialNetwork_Login",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialNetwork_Login/SocialNetwork_Login-Prefix.pch";
 				INFOPLIST_FILE = "SocialNetwork_Login/SocialNetwork_Login-Info.plist";
@@ -389,6 +411,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SocialNetwork_Login",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialNetwork_Login/SocialNetwork_Login-Prefix.pch";
 				INFOPLIST_FILE = "SocialNetwork_Login/SocialNetwork_Login-Info.plist";

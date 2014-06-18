@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<FBLoginViewDelegate>
+
+- (IBAction)Facebook:(id)sender;
+- (IBAction)Twitter:(id)sender;
+- (IBAction)GooglePlus:(id)sender;
 
 @end
